@@ -32,7 +32,13 @@ dependencies:
   path_provider: ^2.1.0
   awesome_notifications: ^0.8.2
   timezone: ^0.9.2
-  flutter_colorpicker: ^1.0.3
+
+  # Use dependency overrides to force compatible fixes.
+  flutter_colorpicker:
+    git:
+      url: https://github.com/mchome/flutter_colorpicker.git
+      ref: master
+  
   flutter_launcher_icons: ^0.13.1
   window_size:
     git:
@@ -46,10 +52,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^3.0.1
 
-# For now mipmaps are used.
 flutter_icons:
   image_path_android: "assets/images/icon.png"
   image_path_ios: "assets/images/ios_icon.jpg"
@@ -76,3 +80,4 @@ flutter:
 
 flutter_intl:
   enabled: true
+
